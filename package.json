@@ -1,23 +1,47 @@
 {
-  "name": "poc-next-husky",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@next/font": "13.4.9",
-    "@types/node": "20.4.1",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.9",
-    "next": "13.4.9",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.1.6"
-  }
+    "name": "poc-next-husky",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install",
+        "commit": "git-cz"
+    },
+    "dependencies": {
+        "@next/font": "13.4.9",
+        "@types/node": "20.4.1",
+        "@types/react": "18.2.14",
+        "@types/react-dom": "18.2.6",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "eslint": "^8.44.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-next": "13.4.9",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-react": "^7.27.0",
+        "eslint-plugin-security": "^1.7.1",
+        "eslint-plugin-sonarjs": "^0.19.0",
+        "next": "13.4.9",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "typescript": "5.1.6"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.6.6",
+        "@commitlint/config-conventional": "^17.6.6",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.3",
+        "prettier": "^3.0.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
 }
